@@ -1,0 +1,963 @@
+/* Google fonts :- */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+/* font-family: 'Be Vietnam Pro', sans-serif; */
+
+
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+    /* To smooth the scroll to a section */
+    scroll-behavior: smooth;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+:root{
+    --bgOrange : #e84949;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Navigation & Heading-logo -------------------- */
+
+.container{
+    /* width: 1200px; */
+    width: 85%;
+    margin: 0 auto;
+    /* Top-bottom = 0, left-right margin equal */
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 2.2rem;
+    padding-right: 0.1rem;
+    border-radius:0.7rem;
+}
+
+.logo-text{
+    font-size: 1.75rem;
+}
+
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+
+.nav-items div{
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-items div a{
+    /* Nav. links with no underline & black color */
+    color: black;
+    text-decoration: none;
+}
+
+.nav-items div:hover{
+    font-weight:bold;
+    transition: 0.8s ease;
+}
+
+/* Hero section ----------------------- */
+
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.faded-text{
+    /* Disable text-selection */
+    user-select: none;
+    font-size: 5rem;
+    color: rgb(231, 231, 231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+/* Hero-section-left ---------------------- */
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: #343d68;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.hero-section-sub-heading{
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+}
+
+.hero-section-description{
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 70%;
+}
+
+
+/* "Hire-me" button animate ------------------- */
+
+.btn{
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    /* Add shadow */
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+}
+
+/* Adding a content before current */
+/* In our case, have to add a background */
+
+.btn::before{
+    content: "";
+    /* Black background - animation */
+    background-color: #fff;
+    /* As content is "", so 0 width in starting */
+    position: absolute;
+    /* As an overlap will happen */
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    /* Top 4 lines will fill whole button */
+    transform: scaleX(0);
+    /* Initially 0-width. */
+    transform-origin: left;
+    /* Start from left */
+    transition: all 0.8s;
+    /* Show text above.. using z-index */
+    z-index:-1;
+}
+
+.btn:hover::before{
+    /* Fill the before, on hover */
+    transform: scaleX(1);
+}
+
+.btn:hover{
+    border: solid 3px var(--bgOrange);
+    color: black;
+}
+
+
+/* Hero-section-right ------------------------ */
+
+.hero-section-right{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.my-pic{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+    /* keyframe-name  time  time-curve  animatn-duration */
+}
+
+/* To place below all images.. -ve z-index */
+.my-pic img{
+    z-index: -9;
+    width: 15vw;
+}
+
+@keyframes scaleImage {
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+        /* Add shadow when image is small. */
+        box-shadow: 3px 3px 10px black;
+    }
+
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 0.5px 0.5px 1px gray;
+    }
+
+    100%{
+        /* Add shadow when getting small. */
+        box-shadow: 3px 3px 10px black;
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+}
+
+.icon-dots{
+    z-index: 4;
+    /* +ve.. above image */
+    bottom: -1.5rem;
+    right: 0;
+    animation: dotsAnimation 4s linear infinite;
+}
+
+.icon-dots img{
+    width: 5vw;
+}
+
+@keyframes dotsAnimation{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.icon-cube{
+    z-index: 4;
+    top: -0.8rem;
+    right: 1em;
+    animation: cubeRotate 3s linear infinite;
+}
+
+.icon-cube img{
+    width: 2.3vw;
+}
+
+@keyframes cubeRotate{
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+
+    50%{
+        transform: rotateY(180deg) translateY(-10px);
+    }
+
+    100%{
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+
+.icon-circle{
+    z-index: 4;
+    bottom: -1rem;
+    left: 1rem;
+    animation: shakeEffect 5.8s linear infinite;
+}
+
+.icon-circle img{
+    width: 1.2vw;
+}
+
+@keyframes shakeEffect{
+    0%{
+        left: 0;
+        bottom: 0;
+    }
+
+    50%{
+        left: 7%;
+        bottom: 14%;
+    }
+
+    100%{
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.icon-zigzags{
+    z-index: 4;
+    top: 1.5em;
+    left: -0.3em;
+    animation: zigZagAnimation 3.5s ease-in infinite;
+}
+
+.icon-zigzags img{
+    width: 2.5vw;
+}
+
+@keyframes zigZagAnimation{
+    0%{
+        top: 0;
+        left: 0;
+    }
+
+    50%{
+        top: 2%;
+        left: 5%;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+.icon-plus{
+    z-index: 4;
+    top: -1.3rem;
+    left: 45%;
+    animation: shakeEffectPlus 5.3s ease-in infinite;
+}
+
+.icon-plus img{
+    width: 1.6vw;
+}
+
+@keyframes shakeEffectPlus{
+    50%{
+        top: 2%;
+        left: 48%;
+    }
+}
+
+
+
+/* Project-section ------------------------- */
+
+.project-section{
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+}
+
+.page-header{
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    /* top-bottom left-right(equal) */
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    /* As project-cards are below each other */
+    gap: 120px;
+}
+
+.project-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(./images/Project-images/music-player.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+/* Project card hover-animation --------------------- */
+
+.project-card::after{
+    content: "";
+    /* To overlap black tint over card (relative positioned) */
+    position: absolute;
+    /* To completely overlap the card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+}
+
+.project-card::before{
+    content: "";
+    /* To overlap the blue-filter */
+    position: absolute;
+    /* To completely overlap.. nothing left */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    /* By default.. width is 0 of this blue filter */
+    /* We want slide.. along X.. so setting 0 width */
+    transform-origin: left;
+    /* Starting point is set to left end */
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.project-card:hover::before{
+    transform: scaleX(1);
+    /* Blue gradient shows up */
+}
+
+
+/* Project number ----------------------------- */
+
+.project-number{
+    font-size: 200px;
+    color: white;
+    font-weight: 600;
+    /* Overlap above card-hover animation */
+    position: absolute;
+    z-index: 3;
+    /* By default no. is hidden */
+    opacity: 0;
+}
+
+.project-number-right{
+    right: -40px;
+    top: -45px;
+}
+
+.project-number-left{
+    left: -40px;
+    top: -45px;
+}
+
+/* Show no. on project-card hover !! */
+.project-card:hover .project-number{
+    opacity: 1;
+    transition: all 0.8s;
+}
+
+/* Project content ----------------------------- */
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    gap: 1em;
+    transition: all 0.4s;
+}
+
+/* If no. is left-aligned.. content shifts right
+   If no. is right-aligned.. content shifts left */
+
+.project-content-left{
+    right: 0%;
+    /* Add extra margin to right.. to shift left
+    ..here default position is giving right visuals. */
+}
+
+.project-content-right{
+    left: 25%;
+    /* Add extra margin to left.. to shift right */
+}
+
+/* Project-skills & heading --------------------------- */
+
+.project-skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 10px;
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-sub-heading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-group{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.btn-project , .btn-project:hover {
+    border: none;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+    transition: all 0.4s;
+}
+
+.project-card:hover .project-content{
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
+
+#project2{
+    background-image: url(./images/Project-images/music-generation.png);
+    margin-left: 10%;
+}
+
+
+/* Media Queries (for slightly responsive) ---------------------------------- */
+
+@media (max-width: 1300px) {
+    .page-header{
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .hero-section-heading{
+        font-weight: 450;
+        font-size: 1.9rem;
+    }
+
+    .hero-section-sub-heading{
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+    }
+
+    .hero-section-description{
+        font-weight: 450;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-section-left{
+        width: 50%;
+    }
+
+    .my-pic{
+        padding: 2.1rem;
+    }
+
+    .btn{
+        padding: 0.7rem 2.1rem;
+        /* Add shadow */
+        box-shadow: 4px 4px 6px 0px #0000003f;
+        font-size: 16px;
+        font-weight: 450;
+        border: solid 2.8px transparent;
+    }
+
+    .faded-text{
+        font-size: 4rem;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content{
+        scale: 0.5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .project-content-right {
+        left: 0;
+    }
+
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading{
+        width: 100%;
+    }
+
+    #project2{
+        margin-left: 0;
+    }
+
+    .project-skill-container{
+        width: 100%;
+    }
+
+    .project-skill{
+        width: 35px;
+    }
+
+    .project-card:hover .project-number{
+        opacity: 0;
+    }
+
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
+}
+
+@media (max-width: 850px) {
+    .logo{
+        width: 1.6rem;
+        padding-right: 0.07rem;
+        border-radius:0.5rem;
+    }
+    
+    .logo-text{
+        font-size: 1.45rem;
+    }
+
+    .nav-items div{
+        font-size: 1.1rem;
+        font-weight: 350;
+    }
+
+    .nav-items{
+        gap: 1rem;
+        padding: 0 2.3rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .page-header{
+        padding-top: 15px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .logo{
+        width: 1.2rem;
+        padding-right: 0.05rem;
+        border-radius:0.4rem;
+    }
+    
+    .logo-text{
+        font-size: 1rem;
+    }
+
+    .nav-items div{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+
+    .nav-items{
+        gap: 0.8rem;
+        padding: 0 2rem;
+    }
+
+    .hero-section-heading{
+        font-weight: 350;
+        font-size: 1.4rem;
+    }
+
+    .hero-section-left{
+        width: 50%;
+    }
+
+    .hero-section-sub-heading{
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+    }
+
+    .hero-section-description{
+        font-weight: 300;
+        margin-top: 0.6rem;
+        font-size: 0.6rem;
+    }
+
+    .my-pic{
+        padding: 1.2rem;
+    }
+
+    .btn{
+        padding: 0.5rem 1.7rem;
+        /* Add shadow */
+        box-shadow: 2px 2px 3px 0px #0000003f;
+        font-size: 12px;
+        font-weight: 350;
+        border: solid 2px transparent;
+    }
+
+    .faded-text{
+        font-size: 2.5rem;
+        bottom: -12%;
+        left: -3%;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content{
+        scale: 0.5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .project-content-right {
+        left: 0;
+    }
+
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading{
+        width: 100%;
+    }
+
+    #project2{
+        margin-left: 0;
+    }
+
+    .project-skill-container{
+        width: 100%;
+    }
+
+    .project-skill{
+        width: 35px;
+    }
+
+    .project-card:hover .project-number{
+        opacity: 0;
+    }
+
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
+}
+
+
+/* Skills container ---------------------------- */
+
+.skills-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+
+.skills-container-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 10%;
+}
+
+.skills-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+    /* To overlap icons (absolute) over it */
+}
+
+.blob-style{
+    position: absolute;
+    z-index: -1;
+    /* Animation needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blobAnimate 3s linear infinite;
+}
+
+@keyframes blobAnimate{
+    0%{
+
+    }
+
+    50%{
+        top: 54%;
+        left: 46%;
+    }
+
+    100%{
+
+    }
+}
+
+/* Heading & skill-logo -------------------------------- */
+
+.skills-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+
+.caps{
+    font-size: 90px;
+}
+
+.skills-sub-heading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+    /* Text will occupy whole width from this. */
+}
+
+.skills-sub-heading p{
+    margin: 15px 0;
+}
+
+.skills-logo{
+    width: 90px;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skill-fade-text{
+    position: absolute;
+    font-size: 10em;
+    font-style: bold;
+    font-weight:bolder;
+    color: rgb(231, 231, 231);
+    bottom: -34.5%;
+    right: -2%;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+
+/* Contact Me section ----------------------- */
+
+.contact-me-form-container{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-me-sub-heading{
+    text-transform: capitalize;
+    color: #343d68aa;
+    font-size: 3rem;
+}
+
+.contact-me-heading{
+    color: var(--bgOrange);
+    font-size: 5em;
+    padding-top: 2rem;
+}
+
+.contact-me-forms-container {
+    width: 70%;
+}
+
+.form-field-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin: 2rem 5rem;
+}
+
+.form-field{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.form-field-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+#submit-btn{
+    border: none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    left: 2.9rem;
+}
+
+#submit-btn:hover{
+    scale: 0.9;
+}
+
+.submit-icon{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
