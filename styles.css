@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
 /* font-family: 'Be Vietnam Pro', sans-serif; */
 
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Foldit:wght@800&display=swap');
+/* font-family: 'Be Vietnam Pro', sans-serif; */
+/* font-family: 'Foldit', cursive; */
 
 *{
     margin:0;
@@ -25,6 +28,11 @@
 
 /* Navigation & Heading-logo -------------------- */
 
+.background{
+    background-image: url(images/Animation-images/background1.jpg);
+    background-size:cover;
+}
+
 .container{
     /* width: 1200px; */
     width: 85%;
@@ -45,9 +53,9 @@
 }
 
 .logo{
-    width: 2.2rem;
-    padding-right: 0.1rem;
-    border-radius:0.7rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Foldit', cursive;
+    font-size: 3rem;
 }
 
 .logo-text{
@@ -547,253 +555,6 @@
 }
 
 
-/* Media Queries (for slightly responsive) ---------------------------------- */
-
-@media (max-width: 1300px) {
-    .page-header{
-        padding-top: 30px;
-        color: var(--bgOrange);
-        text-align: center;
-        font-size: 4rem;
-    }
-
-    .hero-section-heading{
-        font-weight: 450;
-        font-size: 1.9rem;
-    }
-
-    .hero-section-sub-heading{
-        font-size: 2.2rem;
-        line-height: 2.2rem;
-    }
-
-    .hero-section-description{
-        font-weight: 450;
-        margin-top: 0.9rem;
-        font-size: 0.9rem;
-    }
-
-    .hero-section-left{
-        width: 50%;
-    }
-
-    .my-pic{
-        padding: 2.1rem;
-    }
-
-    .btn{
-        padding: 0.7rem 2.1rem;
-        /* Add shadow */
-        box-shadow: 4px 4px 6px 0px #0000003f;
-        font-size: 16px;
-        font-weight: 450;
-        border: solid 2.8px transparent;
-    }
-
-    .faded-text{
-        font-size: 4rem;
-    }
-
-    .project-container{
-        padding: 5px;
-        margin: 10px;
-        gap: 60px;
-    }
-
-    .project-card{
-        width: 100%;
-        height: 300px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .project-content{
-        scale: 0.5;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
-
-    .project-content-right {
-        left: 0;
-    }
-
-    .project-heading{
-        font-size: 40px;
-        width: 100%;
-    }
-
-    .project-sub-heading{
-        width: 100%;
-    }
-
-    #project2{
-        margin-left: 0;
-    }
-
-    .project-skill-container{
-        width: 100%;
-    }
-
-    .project-skill{
-        width: 35px;
-    }
-
-    .project-card:hover .project-number{
-        opacity: 0;
-    }
-
-    .project-card:hover .project-content{
-        scale: 0.55;
-    }
-}
-
-@media (max-width: 850px) {
-    .logo{
-        width: 1.6rem;
-        padding-right: 0.07rem;
-        border-radius:0.5rem;
-    }
-    
-    .logo-text{
-        font-size: 1.45rem;
-    }
-
-    .nav-items div{
-        font-size: 1.1rem;
-        font-weight: 350;
-    }
-
-    .nav-items{
-        gap: 1rem;
-        padding: 0 2.3rem;
-    }
-}
-
-@media (max-width: 650px) {
-    .page-header{
-        padding-top: 15px;
-        color: var(--bgOrange);
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
-    .logo{
-        width: 1.2rem;
-        padding-right: 0.05rem;
-        border-radius:0.4rem;
-    }
-    
-    .logo-text{
-        font-size: 1rem;
-    }
-
-    .nav-items div{
-        font-size: 0.8rem;
-        font-weight: 300;
-    }
-
-    .nav-items{
-        gap: 0.8rem;
-        padding: 0 2rem;
-    }
-
-    .hero-section-heading{
-        font-weight: 350;
-        font-size: 1.4rem;
-    }
-
-    .hero-section-left{
-        width: 50%;
-    }
-
-    .hero-section-sub-heading{
-        font-size: 1.7rem;
-        line-height: 1.7rem;
-    }
-
-    .hero-section-description{
-        font-weight: 300;
-        margin-top: 0.6rem;
-        font-size: 0.6rem;
-    }
-
-    .my-pic{
-        padding: 1.2rem;
-    }
-
-    .btn{
-        padding: 0.5rem 1.7rem;
-        /* Add shadow */
-        box-shadow: 2px 2px 3px 0px #0000003f;
-        font-size: 12px;
-        font-weight: 350;
-        border: solid 2px transparent;
-    }
-
-    .faded-text{
-        font-size: 2.5rem;
-        bottom: -12%;
-        left: -3%;
-    }
-
-    .project-container{
-        padding: 5px;
-        margin: 10px;
-        gap: 60px;
-    }
-
-    .project-card{
-        width: 100%;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .project-content{
-        scale: 0.5;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
-
-    .project-content-right {
-        left: 0;
-    }
-
-    .project-heading{
-        font-size: 40px;
-        width: 100%;
-    }
-
-    .project-sub-heading{
-        width: 100%;
-    }
-
-    #project2{
-        margin-left: 0;
-    }
-
-    .project-skill-container{
-        width: 100%;
-    }
-
-    .project-skill{
-        width: 35px;
-    }
-
-    .project-card:hover .project-number{
-        opacity: 0;
-    }
-
-    .project-card:hover .project-content{
-        scale: 0.55;
-    }
-}
-
-
 /* Skills container ---------------------------- */
 
 .skills-container{
@@ -916,8 +677,14 @@
     padding-top: 2rem;
 }
 
-.contact-me-forms-container {
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
     width: 70%;
+    margin: 2rem 5rem;
+    padding-right: 11rem;
 }
 
 .form-field-container{
@@ -951,6 +718,7 @@
     font-size: 1.4rem;
     margin: 1rem 0;
     left: 2.9rem;
+    padding-left: 3rem;
 }
 
 #submit-btn:hover{
@@ -958,6 +726,341 @@
 }
 
 .submit-icon{
+    /* to create spacing between text & icon */
     padding: 0 1rem;
     font-size: 1.5rem;
+}
+
+
+/* Footer section ---------------------------------- */
+
+#footer{
+    position: relative;
+    /* To overlap other things on this section */
+    margin-top: -1px;
+    background-color: #343d58;
+    padding: 3rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    align-items: baseline;
+}
+
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+}
+
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-links{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-links:hover{
+    color: var(--bgOrange);
+    text-decoration: none;
+}
+
+.icon-wrapper{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.account-links{
+    width: 32px;
+    color: white;
+}
+
+.account-links:hover{
+    transform: scale(1.1);
+    color: var(--bgOrange);
+    transition: all 0.3s;
+    box-shadow: 0 1.5px 4px 0.2px rgb(231, 231, 231);
+    border-radius: 7px;
+}
+
+.coding-profiles-heading {
+    margin-bottom: 1.5rem;
+    margin-top: 0.7rem;
+    font-size: 1.13rem;
+}
+
+
+
+/* Media Queries (for slightly responsive) --------------------------------------------------------------- */
+
+@media (max-width: 1300px) {
+    .page-header{
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .hero-section-heading{
+        font-weight: 450;
+        font-size: 1.9rem;
+        height: 3.8rem;
+    }
+
+    .hero-section-sub-heading{
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+    }
+
+    .hero-section-description{
+        font-weight: 450;
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-section-left{
+        width: 50%;
+    }
+
+    .my-pic{
+        padding: 2.1rem;
+    }
+
+    .btn{
+        padding: 0.7rem 2.1rem;
+        /* Add shadow */
+        box-shadow: 4px 4px 6px 0px #0000003f;
+        font-size: 16px;
+        font-weight: 450;
+        border: solid 2.8px transparent;
+    }
+
+    .faded-text{
+        font-size: 4rem;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content{
+        scale: 0.7;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .project-content-right {
+        left: 0;
+    }
+
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading{
+        width: 100%;
+    }
+
+    #project2{
+        margin-left: 0;
+    }
+
+    .project-skill-container{
+        width: 100%;
+    }
+
+    .project-skill{
+        width: 35px;
+    }
+
+    .project-card:hover .project-number{
+        opacity: 0;
+    }
+
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
+
+    
+}
+
+@media (max-width: 850px) {
+    .logo{
+        font-size: 2.7rem;
+    }
+    
+    .logo-text{
+        font-size: 1.45rem;
+    }
+
+    .nav-items div{
+        font-size: 1.1rem;
+        font-weight: 350;
+    }
+
+    .nav-items{
+        gap: 1rem;
+        padding: 0 2.3rem;
+    }
+
+    .hero-section-heading{
+        font-weight: 400;
+        font-size: 1.4rem;
+        height: 2rem;
+    }
+
+    .project-content{
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .page-header{
+        padding-top: 15px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .logo-container{
+        gap: 0.05rem;
+    }
+
+    .logo{
+        font-size: 2.2rem;
+    }
+    
+    .logo-text{
+        font-size: 1rem;
+    }
+
+    .nav-items div{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+
+    .nav-items{
+        gap: 0.8rem;
+        padding: 0 2rem;
+    }
+
+    .hero-section-heading{
+        font-weight: 350;
+        font-size: 1rem;
+        height: 2.3rem;
+    }
+
+    .hero-section-left{
+        width: 70%;
+    }
+
+    .hero-section-sub-heading{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    .hero-section-description{
+        font-weight: 300;
+        margin-top: 0.6rem;
+        font-size: 0.6rem;
+    }
+
+    .my-pic{
+        padding: 0.7rem;
+        width: 15vw;
+    }
+
+    .btn{
+        padding: 0.5rem 1.7rem;
+        /* Add shadow */
+        box-shadow: 2px 2px 3px 0px #0000003f;
+        font-size: 12px;
+        font-weight: 350;
+        border: solid 2px transparent;
+    }
+
+    .faded-text{
+        font-size: 2.5rem;
+        bottom: -12%;
+        left: -3%;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content{
+        scale: 0.6;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .project-content-right {
+        left: 0;
+    }
+
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading{
+        width: 100%;
+        display: none;
+    }
+
+    #project2{
+        margin-left: 0;
+    }
+
+    .project-skill-container{
+        width: 100%;
+    }
+
+    .project-skill{
+        width: 35px;
+    }
+
+    .project-card:hover .project-number{
+        opacity: 0;
+    }
+
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
 }
